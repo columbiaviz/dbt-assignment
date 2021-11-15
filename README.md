@@ -1,4 +1,10 @@
+The following are instructions to get dbt running locally on your computer.  
+The instructions are for Mac OS, using pip as the Python package installer.
+We assume you are using Python 3.x
+
+
 ### Setup
+
 
 
 Installation
