@@ -71,12 +71,16 @@ Now, you will add `.sql` files (called a "model" in dbt) under [models/example/]
 and register each `sql file` in [models/example/schema.yml](./models/example/schema.yml).
 
 
-You may find the [unpivot command](https://github.com/dbt-labs/dbt-utils#unpivot-source) to be very useful.
-In addition, the following are a list of attributes that do NOT encode data in the attribute names:
+Some things you may find helpful/tips
+
+* You may find the [unpivot command](https://github.com/dbt-labs/dbt-utils#unpivot-source) to be very useful.
+* The following are a list of attributes that do NOT encode data in the attribute names:
 
     'yfips','year','fips','state','county_name','urbanicity','region',
     'division','commuting_zone','metro_area','land_area','jail_rated_capacity' 
 
+* First identify the real attributes encoded in the dataset's attribute names,
+  define them using a dbt model, and then populate them using more models
 
 ### Run everything
 
