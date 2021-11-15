@@ -1,0 +1,19 @@
+# This basically defines 
+# * table schemas 
+# * column constraints
+# * fkey relationships
+
+version: 2
+
+sources:
+  - name: incarceration
+    schema: main
+    tables:
+      - name: incarceration
+
+models:
+  - name: my_first_dbt_model
+    description: "A starter dbt model"
+
+  - name: inc_unpivot
+    description: "UnPivot incarceration table"

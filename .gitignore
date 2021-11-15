@@ -3,3 +3,4 @@ target/
 dbt_modules/
 logs/
 incarceration.db
+models/example/inc_*sql
