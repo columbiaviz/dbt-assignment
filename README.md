@@ -49,9 +49,6 @@ and install a useful dbt utility package
 
 ### Create the transforms
 
-You will add `.sql` files (called a "model" in dbt) under [models/example/](./models/example) to define transformations,
-and register each `sql file` in [models/example/schema.yml](./models/example/schema.yml).
-
 
 First, register the base tables in the duckdb database:
 
@@ -61,6 +58,18 @@ First, register the base tables in the duckdb database:
         schema: main
         tables:
           - name: incarceration
+
+
+
+Now, you will add `.sql` files (called a "model" in dbt) under [models/example/](./models/example) to define transformations,
+and register each `sql file` in [models/example/schema.yml](./models/example/schema.yml).
+
+
+You may find the [unpivot command](https://github.com/dbt-labs/dbt-utils#unpivot-source) to be very useful.
+In addition, the following are a list of attributes that do NOT encode data in the attribute names:
+
+    'yfips','year','fips','state','county_name','urbanicity','region',
+    'division','commuting_zone','metro_area','land_area','jail_rated_capacity' 
 
 
 ### Run everything
