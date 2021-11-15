@@ -56,7 +56,7 @@ and install a useful dbt utility package
 ### Create the transforms
 
 
-First, register the base tables in the duckdb database:
+First, [register the base tables in duckdb as sources](https://docs.getdbt.com/docs/building-a-dbt-project/using-sources):
 
     # edit models/example/schema.yml and add the following lines
     sources:
