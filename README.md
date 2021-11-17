@@ -17,6 +17,8 @@ Installation
     cd dbt-duckdb 
     pip install .
 
+
+    # !!You can skip this if starting from the github repo
     # create new dbt project using duckdb
     dbt init test --adapter duckdb
 
@@ -37,6 +39,7 @@ If this database file does NOT work with your installed version of duckdb, it's 
     D CREATE TABLE incarcerations as SELECT * FROM read_csv_auto(PATHTOCSV)
 
 Now we configure your global dbt profile to actually use duckdb, 
+**You can skip this if starting from the github repo**
 
 
     # edit ~/.dbt/profiles.yml and add the following lines
@@ -50,6 +53,7 @@ Now we configure your global dbt profile to actually use duckdb,
 
 Now we configure your new dbt project to know about duckdb (yea, seems redundant)
 and install a useful dbt utility package
+**You can skip this if starting from the github repo**
 
     # edit ./dbt_project.yml and set
     profile: 'dbt_duckdb'
@@ -59,7 +63,9 @@ and install a useful dbt utility package
       - git: git@github.com:dbt-labs/dbt-utils.git
         revision: 0.7.4
 
-    # run the following command to install the dependencies 
+
+Run the following command to install the dependencies 
+
     dbt deps
 
 
