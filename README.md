@@ -26,6 +26,16 @@ Download the duckdb database containing incarceration statistics
     # run in the command line, or manually download the file
     wget "https://www.dropbox.com/s/6bq1q8bf3xnfb6t/incarceration.db"
 
+If this database file does NOT work with your installed version of duckdb, it's OK.  You can create the table yourself:
+
+    # 1. download the CSV file
+
+    # 2. run duckdb:
+    duckdb
+
+    # 3. create the table in the duckdb prompt.  "D" below is their prompt
+    D CREATE TABLE incarcerations as SELECT * FROM read_csv_auto(PATHTOCSV)
+
 Now we configure your global dbt profile to actually use duckdb, 
 
 

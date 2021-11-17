@@ -17,3 +17,9 @@ models:
 
   - name: inc_unpivot
     description: "UnPivot incarceration table"
+
+  - name: inc_newattrs
+    description: "create new attributes"
+
+  - name: inc_race
+
